@@ -334,4 +334,4 @@ dependencies:
   - zstd=1.5.2=h12be248_6
   - pip:
       - opencv-contrib-python==4.7.0.72
-prefix: C:\Users\leopo\anaconda3\envs\batomouche
+prefix: /Users/yubocai/anaconda3/envs/BATO
