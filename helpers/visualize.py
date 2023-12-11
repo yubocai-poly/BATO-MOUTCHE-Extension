@@ -3,6 +3,9 @@ import pandas as pd
 import geopandas as gpd
 from matplotlib import colormaps
 from matplotlib.colors import ListedColormap
+import numpy as np
+from palettable.colorbrewer.qualitative import Pastel1_7
+import seaborn as sns
 
 
 def folium_grid_cat_plot(gdf, var : str, cmap = 'Set1', 
