@@ -1,2 +1,10 @@
 data/
 transportation/data_result/
+
+**/.DS_Store
+
+# Ignore Python cache directories in any directory
+**/__pycache__/
+
+# Ignore cache directories in any directory
+**/cache/
