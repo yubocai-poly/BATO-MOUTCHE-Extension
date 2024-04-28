@@ -2,6 +2,8 @@ data/
 transportation/data_result/
 
 **/.DS_Store
+**/.ipynb_checkpoints
+**/.vscode
 
 # Ignore Python cache directories in any directory
 **/__pycache__/
