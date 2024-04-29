@@ -38,8 +38,8 @@ coords_places = {
 ########################################################################################################################
 
 
-def count_transport_stations(coords=coords_places, 
-                             tags=tags_transportation, 
+def count_transport_stations(coords=coords_places,
+                             tags=tags_transportation,
                              radius=1000):
     # Initialize a dictionary to store the count of each type of station
     data = {key: [] for key in tags.keys()}
@@ -66,10 +66,10 @@ def count_transport_stations(coords=coords_places,
 # Visualization functions for the basic statistics information of the transportatino in Paris
 ########################################################################################################################
 def composition_chart_public_transportation(df,
-                      place,
-                      font_name='sans-serif',
-                      font_size=12,
-                      fig_size=(8, 8)):
+                                            place,
+                                            font_name='sans-serif',
+                                            font_size=12,
+                                            fig_size=(8, 8)):
     # Extract the data for the specified place
     data_row = df.loc[place]
 
@@ -106,12 +106,14 @@ def compare_places_public_transportation(df, font_name='sans-serif', font_size=1
             list_places.append(place)
             list_var.append(var)
             list_number.append(df.loc[place, var])
-    
+
     # Create a new dataframe with the lists
-    df_new = pd.DataFrame({'Place': list_places, 'Variable': list_var, 'Number': list_number})
+    df_new = pd.DataFrame(
+        {'Place': list_places, 'Variable': list_var, 'Number': list_number})
 
     # Create a bar chart with the new dataframe
-    fig = px.bar(df_new, x="Place", y="Number", color="Variable", width=fig_size[0], height=fig_size[1])
+    fig = px.bar(df_new, x="Place", y="Number", color="Variable",
+                 width=fig_size[0], height=fig_size[1])
 
     # Update layout with font properties
     fig.update_layout(
@@ -121,5 +123,5 @@ def compare_places_public_transportation(df, font_name='sans-serif', font_size=1
             size=font_size,
         )
     )
-    
+
     return fig
